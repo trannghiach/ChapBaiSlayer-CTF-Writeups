@@ -1,6 +1,6 @@
 In this challenge, we receive a PDF file and need to extract something hidden inside it. First, let’s use the `pdfid` command to scan the file **report.pdf**.
-Command:
 
+Command:
 ```bash
 pdfid report.pdf
 ```
