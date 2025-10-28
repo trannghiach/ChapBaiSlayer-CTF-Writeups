@@ -3,7 +3,8 @@ In this challenge, we receive a PDF file and need to extract something hidden in
 pdfid report.pdf
 ```
 Result:
-<img width="743" height="466" alt="image" src="https://github.com/user-attachments/assets/1f090c50-e58a-4a1a-96a2-a8190dbf6b06" />
+
+<img width="743" height="466" style="text-align:center;" alt="image" src="https://github.com/user-attachments/assets/1f090c50-e58a-4a1a-96a2-a8190dbf6b06" />
 
 We can see that there is an object containing the keyword `/JS` or `/JavaScript`, which indicates a malicious payload inserted into the file. We use [pdf-parser](https://blog.didierstevens.com/programs/pdf-tools/) to extract this object. Command:
 ```bash
