@@ -1,4 +1,5 @@
-In this challenge, we receive a PDF file and need to extract something hidden inside it. First, let’s use the `pdfid` command to scan the file **report.pdf**. Command:
+In this challenge, we receive a PDF file and need to extract something hidden inside it. First, let’s use the `pdfid` command to scan the file **report.pdf**.
+Command:
 ```bash
 pdfid report.pdf
 ```
@@ -6,7 +7,8 @@ Result:
 
 <img style="display: block; margin: auto; width: 743px; height: 466px;" alt="image" src="https://github.com/user-attachments/assets/1f090c50-e58a-4a1a-96a2-a8190dbf6b06" />
 
-We can see that there is an object containing the keyword `/JS` or `/JavaScript`, which indicates a malicious payload inserted into the file. We use [pdf-parser](https://blog.didierstevens.com/programs/pdf-tools/) to extract this object. Command:
+We can see that there is an object containing the keyword `/JS` or `/JavaScript`, which indicates a malicious payload inserted into the file. We use [pdf-parser](https://blog.didierstevens.com/programs/pdf-tools/) to extract this object.
+Command:
 ```bash
 python pdf-parser.py --search JS report.pdf > JS-report.txt
 ```
@@ -77,7 +79,8 @@ try {
 }
 ```
 
-We extract the variable `var serialized_obj` into a .bin file and use the strings and grep commands to retrieve the flag. Command:
+We extract the variable `var serialized_obj` into a `.bin` file and use the strings and grep commands to retrieve the flag.
+Command:
 ```bash
 strings -e l decoded-base64.bin | grep "CTF{"
 ```
