@@ -1,7 +1,7 @@
 In the challenge, we assume this web service uses an LLM to respond to various protocols (HTTP, FTP, SMTP, etc.). We need to exfiltrate the prompt or flag via a poisoned input, but the payload must be presented in the form of a protocol request (for example, SMTP).
 
 Code:
-```
+```python
 import requests
 import re
 import json
