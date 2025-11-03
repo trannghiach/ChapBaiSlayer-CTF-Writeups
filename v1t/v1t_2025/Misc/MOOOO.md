@@ -47,7 +47,7 @@ TRY HARDERRR
 
 - Đây rất có thể là 1 loại mã hóa `whitespace`. Decode bằng `stegsnow`, thu được flag
 
-    ![alt text](image.png)
+    ![alt text](./images/image8.png)
 
 ### Result
 ```
