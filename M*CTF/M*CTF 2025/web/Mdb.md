@@ -49,7 +49,7 @@ This was the most arduous and methodical phase, requiring systematic testing and
 *   **Failure #1 - Single Quote (`'`):** The most basic injection attempt, `title=a'`, was immediately blocked by the WAF, returning `{"error":"Forbidden characters!"}`.
 *   **Failure #2 - Double Quote (`"`):** A common technique is to try other quotation characters. The payload `title=a"` bypassed the WAF but only returned `{"result":null}`. This was because the original query string was enclosed in single quotes, so the double quote was treated as a literal character.
 *   **Breakthrough #1 - The Backslash (`\`):** I discovered that the `\` character was not on the blacklist.
-    *   The payload `title=a\` caused a `Neo.ClientError.Statement.SyntaxError`. This proved that the `\` had escaped the programmer's closing `'`, breaking the syntax and giving us control over the query. This was our first **golden proof**.
+    *   The payload `title=a\` caused a `Neo.ClientError.Statement.SyntaxError`. This proved that the `\` had escaped the programmer's closing `'`, breaking the syntax and giving me control over the query. This was our first **golden proof**.
     *   The payload `title=a\a` returned `{"result":null}`. This proved that `\` only escaped the character immediately following it, leaving the rest of the query syntactically valid. I had discovered a reliable ERROR / NO-ERROR "binary switch".
 *   **The `}` Wall:** To fix the syntax broken by our `\` injection, I needed to inject a `}` character. However, `}` was on the blacklist. I tried every conceivable method to bypass this:
     *   Lowercase URL Encoding (`%7d`): Blocked.
@@ -128,7 +128,7 @@ curl "mdb.mctf.ru/api/movies/getActors?title=\u0027\u007d\u0029\u0020RETURN\u002
 
 ### **Conclusion**
 
-This was an outstanding CTF challenge that required persistence, logical deduction, and the ability to combine multiple attack techniques. It teaches us to:
+This was an outstanding CTF challenge that required persistence, logical deduction, and the ability to combine multiple attack techniques. It teaches me to:
 1.  Always thoroughly analyze source code and static client-side files.
 2.  Approach WAF bypassing systematically through testing and elimination.
 3.  Understand the subtle but critical differences between how a WAF and a backend application interpret input.
