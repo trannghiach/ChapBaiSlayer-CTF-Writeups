@@ -105,9 +105,9 @@ The most critical evidence came from the `Dockerfile` and the custom Java proced
 
 The final goal was to read the randomly named flag file.
 *   **Challenge #1: Wildcards:** The `*` character was blocked.
-    *   **Solution:** The filename had a fixed length (64-char SHA256 hash). I used 64 `?` characters (Unicode: `\u003f`) to match the filename.
+    *   **Solution:** The filename had a fixed length (64-char SHA256 hash). I used 64 `?` characters (Unicode: `\u003f`) to match the filename since it's not in the blocked list (`";|&><*\\"`).
 *   **Challenge #2: Command Chaining:** The `;`, `|`, and `&` characters were all blocked.
-    *   **Solution:** The **newline character (`\n`, Unicode: `\u000a`)** was not blocked and acts as a command separator in the shell.
+    *   **Solution:** The **newline character (`\n`, Unicode: `\u000a`)** was not blocked and acts as a command separator in the shell. (shell tricks hit hardd :Đ)
 
 I crafted the final command injection payload:
 `pwnedByFoqs\u000acat\u0020\u002ftmp\u002fflag_...<64 question marks>...`
