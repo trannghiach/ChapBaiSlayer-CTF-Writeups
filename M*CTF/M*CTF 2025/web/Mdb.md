@@ -66,7 +66,7 @@ When all standard paths seemed closed, I realized the core difference between th
 
     <img width="734" height="644" alt="image" src="https://github.com/user-attachments/assets/e5854020-4b2c-41e9-9163-3e061d4256cd" />
 
-I constructed a test payload: `title=\u0027\u002c\u007d\u0020`
+I constructed a test payload: `title=\u0027\u0027\u002c\u007d\u0020`
 *   The WAF saw the literal characters `\`, `u`, `0`, `0`, `2`, `7`... and let the request pass.
 *   The Neo4j driver saw `\u0027` and translated it into a real `'` character.
 *   **Result:** A `SyntaxError` from Neo4j, proving **the WAF was completely bypassed**. I could now generate any character I wanted.
