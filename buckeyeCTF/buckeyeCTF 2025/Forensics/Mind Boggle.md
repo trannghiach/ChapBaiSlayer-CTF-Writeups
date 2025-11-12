@@ -1,4 +1,5 @@
 @l34ngyn
+
 First, we receive a `mystery.txt` that contains meaningless characters below:
 
 ```
