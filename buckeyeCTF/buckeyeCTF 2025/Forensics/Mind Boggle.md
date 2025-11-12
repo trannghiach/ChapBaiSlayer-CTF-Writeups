@@ -1,3 +1,4 @@
+@l34ngyn
 First, we receive a `mystery.txt` that contains meaningless characters below:
 
 ```
@@ -6,7 +7,7 @@ First, we receive a `mystery.txt` that contains meaningless characters below:
 
 Try using [this website](https://www.dcode.fr/cipher-identifier) to quickly determine the encoding type of that string. We identify this is Brainfuck language.
 
-Cipher-Identifier:
+Brainfuck language:
 <img width="1213" height="564" alt="image" src="https://github.com/user-attachments/assets/57af9933-e58e-46ae-8cc0-5a7defd0fc58" />
 
 Using that web with the slug `/brainfuck-language` to decode that string, we receive the hex string below:
