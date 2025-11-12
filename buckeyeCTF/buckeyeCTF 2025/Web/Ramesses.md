@@ -31,7 +31,7 @@ Base64 Encoding Payload:
 eyJuYW1lIjogImwzNG5neW4iLCAiaXNfcGhhcmFvaCI6IHRydWV9==
 ```
 
-The payload is the base64 encoding of the string `{"name": ""l34ngyn, "is_pharaoh": True}`, edit the cookie with EditCookie or similar and reload the page, we get the flag.
+The payload is the base64 encoding of the string `{"name": ""l34ngyn, "is_pharaoh": True}`, edit the cookie with Cookie-Editor or similar and reload the page, we get the flag.
 
 <img width="666" height="343" alt="image" src="https://github.com/user-attachments/assets/84f2ae6a-9953-407b-9781-f532bdba0edb" />
 
