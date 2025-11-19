@@ -1,4 +1,4 @@
-solver: lilsadfoqs - will have full explaination real quick later :Đ
+solver: lilsadfoqs after the event has ended :( - will have full explaination real quick later :Đ
 
 credit: https://blog.arkark.dev/2025/09/08/asisctf-quals#step-1-forcing-quirks-mode-with-php-warnings
 
