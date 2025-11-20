@@ -2,6 +2,8 @@ solver: lilsadfoqs - will commit full explaination real quick later :Đ
 
 `amateursCTF{W_C4PTCH4_B3h4v13r}`
 
+The main idea is to have the bot visit the site with your h-captcha-reponse (you can catch your browser request after submitting your done captcha puzzle)
+
 ![image](https://github.com/user-attachments/assets/dc3a478a-b2a1-48ed-9762-8996a553d41f)
 
 ![image](https://github.com/user-attachments/assets/ef830062-a419-41e1-a7fc-99ce490eeda8)
@@ -117,3 +119,5 @@ def get_flag():
 if __name__ == "__main__":
     get_flag()
 ```
+
+run the script, paste your h-captcha-reponse, get your flag :D
