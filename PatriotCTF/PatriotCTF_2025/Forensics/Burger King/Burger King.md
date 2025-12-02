@@ -1,6 +1,6 @@
 # Burger King
 
-Category: Misc
+Category: Forensics
 
 Author: l34ngyn
 
